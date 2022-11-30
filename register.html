@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body style="background-color: lightpink;padding: 10%">
+<form method="post" action="/register" , autocomplete="off" style="text-align: center">
+    <h2>Registration</h2>
+    <br class="form-group">
+        <label>Username :</label>
+        <input type="text"  name="name" required><br></br>
+    </div>
+    <div class="form-group">
+        <label>password :</label>
+        <input type="password"  name="password" required><br></br>
+    </div>
+    <div class="form-group">
+        <input type="submit"  value="Register"><br></br>
+        Back to home <a href="{{url_for('index')}}">Home page</a>
+    </div>
+</form>
+</body>
+</html>

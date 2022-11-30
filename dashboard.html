@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        footer{
+            background-color: -moz-cellhighlight;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+ <footer style="padding: 2%">
+     <div style="padding-left: 20px">
+        <button style="background-color: lightblue;padding: 10px;margin-right: 10px;redious:5px" >
+           <a href="{{ url_for("addmovie") }}" style="text-decoration: none;font-size: 18px">Add Movie</a>
+        </button>
+         <button style="background-color: greenyellow;padding: 10px;margin-right: 10px">
+             <a href="{{ url_for('editmovie') }}" style="text-decoration: none;font-size: 18px">Edit Movie</a>
+         </button>
+         <button style="background-color: lightgoldenrodyellow;padding: 10px;margin-right: 10px">
+             <a href="{{ url_for('deletemovie') }}" style="text-decoration: none;font-size: 18px">Delete Movie</a>
+         </button>
+
+         <button style="background-color: darksalmon;padding: 10px;margin-right: 10px">
+             <a href="{{ url_for('find') }}" style="text-decoration: none;font-size: 18px">Search by names</a>
+         </button>
+         <button style="background-color: springgreen;padding: 10px;margin-right: 10px">
+             <a href="{{ url_for('search') }}" style="text-decoration: none;font-size: 18px">Sort by votes</a>
+         </button>
+          <button style="background-color: orangered;padding: 10px;margin-right: 10px">
+             <a href="{{ url_for('logout') }}" style="text-decoration: none;font-size: 18px">Logout</a>
+         </button>
+         <div style="margin-left: 75%">
+             <form action="/recommendation" method="post">
+                 <label>Set Genre :</label>
+                  <select name="gener" required>
+                    <option>--select--</option>
+                    <option>Action</option>
+                    <option>Comedy</option>
+                    <option>Fear movie</option>
+                    <option>Love story</option>
+                    <option>Histry</option>
+                    <option>Loard movie</option>
+                  </select>
+                 <input type="submit" value="search">
+             </form>
+         </div>
+ </footer>
+<br>
+<body style="background-color: lightgray">
+<h2 style="text-align: center">welcome : {{ session['name']}}</h2>
+<h2 style="text-align: center">Movie Management Application</h2><br>
+<h3 style="text-align: center"> Go to view movies to see the movies collections </h3>
+<div style="text-align: center">
+    <button style="background-color: antiquewhite;padding: 10px;margin-right: 10px">
+        <a href="{{ url_for('viewmovie') }}" style="text-decoration: none;font-size: 18px">View Movies Names</a>
+    </button>
+</div>
+</body>
+</html>
+
+
+

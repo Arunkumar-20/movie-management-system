@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comments</title>
+</head>
+<body style="text-align: center;background-color: #DFD3E3">
+<h2 style="padding: 20px">Add your Reviews</h2>
+<form method="post" action="/comments" autocomplete="off">
+    <div>
+        <label>Movie Name</label><br></br>
+        <input type="text" name="name" placeholder="enter movie name..."><br></br>
+        <label>Add Reviews</label><br></br>
+        <input type="text" name="comments" placeholder="add your comments"><br></br>
+        <input type="submit" value="Add" style="cursor: pointer"><br></br>
+        Go to <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    </div>
+
+</form>
+</body>
+</html>
