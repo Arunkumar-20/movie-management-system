@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="text-align: center">
+    <h2>Movies detials</h2>
+</div>
+    <table class="table table-condensed" style="border: 5px lightblue solid;margin-top: 5%" >
+        <thead style="background-color: 	rgb(24,24,24); color: white">
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre of Movie</th>
+            <th>Release Date</th>
+            <th>Upvotes</th>
+            <th>Downvotes</th>
+            <th>Add votes</th>
+            <th>Add Reviews</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for movie in data %}
+            <tr>
+                <td>{{movie.movie_name}}</td>
+                <td>{{movie.movie_type}}</td>
+                <td>{{movie.relese_date}}</td>
+                <td>{{ movie.upvote }}</td>
+                <td>{{ movie.downvote }}</td>
+                <td><a href="{{url_for('voteing')}}">Add Votes </a></td>
+                <td><a href="{{url_for('comments')}}">Add Review </a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div><br>
+    <div style="text-align: center">
+        Back to home <a href="{{url_for('dashboard')}}"> click here</a>
+    </div>
+
+</body>
+</html>
