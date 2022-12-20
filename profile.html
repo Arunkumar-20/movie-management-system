@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body style="margin-left: 25%;padding: 10%;background-color: lightgoldenrodyellow">
+<h3>My Account</h3>
+User Name : {{ name }}<br></br>
+Mail ID : {{ Gmail }}<br></br>
+Fev Genre : {{ Genre }}<br></br>
+<a href="{{ url_for('logout') }}" style="text-decoration: none;font-size: 18px">Logout</a><br></br>
+<a href="{{ url_for('send_mail') }}">Edit your account</a><br></br>
+<a href="{{ url_for('dashboard') }}">Back to home</a>
+</body>
+</html>

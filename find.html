@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body style="text-align: center;background-color: khaki">
+<h2 style="padding: 30px"> Search Movie</h2>
+<form action="/find" method="post" autocomplete="off">
+    <label>Search by Name :</label>
+    <input type="text" name="name" autocomplete="off" placeholder="find movie by name">
+    <input type="submit" value="Go"><br></br>
+    <label>Select Lessthen / Greaterthen :</label>
+     <select name="operater" autocomplete="off">
+        <option>--select--</option>
+        <option>lessthen</option>
+        <option>greater</option>
+    </select><br></br>
+    <label>Enter the year :</label>
+    <input type="text" name="year" placeholder="enter year" >
+    <input type="submit" value="Go"><br></br>
+    Back to home <a href="{{url_for('dashboard')}}"> click here</a>
+</form><br>
+</body>
+</html>
